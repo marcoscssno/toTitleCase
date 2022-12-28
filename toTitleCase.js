@@ -1,8 +1,9 @@
+const findFirstLetterInWord = require('./lib/findFirstLetterInWord');
+
 module.exports = function toTitleCase(text) {
-    if (!text) throw new Error('No text was specified');
+    // if (!text) throw new Error('No text was specified');
     // Words that should be in lower case
     const shouldBeInLowerCasePattern = /^é$|^e$|^o$|^a$|^os$|^as$|^ao$|^à$|^aos$|^às$|^de$|^do$|^da$|^dos$|^das$|^no$|^na$|^para$|^nos$|^nas$|^pro$|^pra$|^pros$|^pras$|^pelo$|^pela$|^pelos$|^pelas$|^um$|^uma$|^uns$|^umas$/;
-    const notALetterPattern = /[^a-zà-ú]/i;
     return text
         .trim()
         .toLowerCase()
@@ -18,10 +19,12 @@ module.exports = function toTitleCase(text) {
                 if (index == text.trim().split(' ').length - 1) {
                     return word.charAt(0).toUpperCase() + word.slice(1);
                 }
+                // Current word is in the middle of the sentence
                 return word;
             }
             // Current word doesn't match shouldBeInLowerCasePattern
-            return word.charAt(0).toUpperCase() + word.slice(1);
+            const firstLetterInWord = findFirstLetterInWord(word);
+            return word.slice(0, firstLetterInWord) + word.charAt(firstLetterInWord).toUpperCase() + word.slice(firstLetterInWord + 1)
         })
         .join(' ');
 }
