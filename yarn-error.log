@@ -1,0 +1,40 @@
+Arguments: 
+  /usr/bin/node /home/marcos/.node/corepack/yarn/1.22.15/bin/yarn.js add --dev jest
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/idea-IC-222.4345.14/bin
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  16.16.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ENETUNREACH 2606:4700::6810:1323:443 - Local (:::0)
+      at internalConnect (node:net:953:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:465:18)
+      at emitLookup (node:net:1097:9)
+      at /home/marcos/.node/corepack/yarn/1.22.15/lib/cli.js:103601:29
+      at /home/marcos/.node/corepack/yarn/1.22.15/lib/cli.js:103447:25
+      at RawTask.module.exports.RawTask.call (/home/marcos/.node/corepack/yarn/1.22.15/lib/cli.js:79579:19)
+      at flush (/home/marcos/.node/corepack/yarn/1.22.15/lib/cli.js:79661:29)
+      at processTicksAndRejections (node:internal/process/task_queues:78:11)
+
+npm manifest: 
+  {
+    "name": "jest-test-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Marcos Cassiano <marcoscssno@gmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

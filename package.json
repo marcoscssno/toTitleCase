@@ -1,0 +1,13 @@
+{
+  "name": "jest-test-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "author": "Marcos Cassiano <marcoscssno@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
